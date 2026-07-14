@@ -28,21 +28,18 @@ void contadorCrescente (int limite) {  //contador crescente
 
 void contadorDecrescente (int limite){ //contador decrescente
     System.out.println("A contagem descrescente a partir do seu número é:");
-    for (int contagem = limite; contagem > 0; contagem--){
+    for (int contagem = limite; contagem >= 0; contagem--){
         System.out.print(contagem);
     }
 }
 
 void repetidor (String nome, int vezes){ //repetidor de nome, quando necessario
-    if (nome.length () > 6){
+    if (nome.length () < 6){
         System.out.println("O nome " + nome + " tem menos de 6 letras");
         System.out.println (nome);
-    } else if (nome.length () < 6) {
-        System.out.println("O nome " + nome + " tem mais do que 6 letras");
-        System.out.println (nome);
-    }else {
-        for (int letras = 0; letras < vezes; letras++) {
+    } else {
+        for (int letras = 0; letras < vezes; letras++){
             System.out.println(nome);
-        }
+        } System.out.println("O nome " + nome + " tem 6 ou mais letras");
     }
 }
